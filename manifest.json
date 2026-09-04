@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "id": "io.github.dzanaga.workspaces-integration-preview",
-  "name": "Workspaces Integration Preview",
+  "id": "io.github.dzanaga.workspaces-indicator-fix",
+  "name": "Omarchy Workspaces Indicator Fix",
   "version": "1.0.0",
   "author": "dzanaga",
-  "description": "Temporary preview of Omarchy workspace PRs #8997 and #10190",
+  "description": "Temporary workspace indicator fix based on Omarchy PRs #8997 and #10190",
   "kinds": [
     "bar-widget"
   ],
@@ -12,7 +12,7 @@
     "barWidget": "Workspaces.qml"
   },
   "barWidget": {
-    "displayName": "Workspaces Integration Preview",
+    "displayName": "Omarchy Workspaces Indicator Fix",
     "description": "Stock-style per-monitor workspace indicators with move-state refresh",
     "category": "Compositor",
     "defaultSection": "left",

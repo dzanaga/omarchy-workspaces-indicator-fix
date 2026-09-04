@@ -1,6 +1,6 @@
-# Omarchy Workspaces Integration Preview
+# Omarchy Workspaces Indicator Fix
 
-A temporary, installable preview of the combined workspace changes proposed in:
+A temporary, installable workspace indicator fix combining the changes proposed in:
 
 - [Omarchy PR #8997](https://github.com/omacom/omarchy/pull/8997): show the workspace active on each bar's own monitor.
 - [Omarchy PR #10190](https://github.com/omacom/omarchy/pull/10190): refresh Quickshell's monitor state after moving a workspace between monitors.
@@ -21,7 +21,7 @@ To enable the colored number, add the option directly beside the widget's `id` i
 
 ```json
 {
-  "id": "io.github.dzanaga.workspaces-integration-preview",
+  "id": "io.github.dzanaga.workspaces-indicator-fix",
   "useThemeColorForActiveWorkspace": true
 }
 ```
@@ -31,7 +31,7 @@ Set it to `false`, or omit it entirely, to use the stock symbol. The shell reloa
 ## Installation
 
 ```bash
-omarchy plugin add https://github.com/dzanaga/omarchy-workspaces-integration-preview.git --enable
+omarchy plugin add https://github.com/dzanaga/omarchy-workspaces-indicator-fix.git --enable
 ```
 
 The plugin declares itself as a clone of `omarchy.workspaces`, so enabling it replaces the built-in workspace widget in its existing position.
@@ -39,22 +39,22 @@ The plugin declares itself as a clone of `omarchy.workspaces`, so enabling it re
 ## Updating
 
 ```bash
-omarchy plugin update io.github.dzanaga.workspaces-integration-preview
+omarchy plugin update io.github.dzanaga.workspaces-indicator-fix
 ```
 
 ## Removal
 
 ```bash
-omarchy plugin remove io.github.dzanaga.workspaces-integration-preview
+omarchy plugin remove io.github.dzanaga.workspaces-indicator-fix
 ```
 
-Removing the preview restores the built-in Omarchy workspace widget.
+Removing the plugin restores the built-in Omarchy workspace widget.
 
 ## Scope
 
 The workspace-state behavior is the combined implementation from the integration test branch. The themed-number option only changes how the active workspace is drawn.
 
-Once both upstream changes are available in Omarchy, this preview plugin should no longer be necessary.
+Once both upstream changes are available in Omarchy, this temporary plugin should no longer be necessary.
 
 ## License
 
