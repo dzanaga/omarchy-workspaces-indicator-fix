@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.dzanaga.workspaces-integration-preview",
+  "name": "Workspaces Integration Preview",
+  "version": "1.0.0",
+  "author": "dzanaga",
+  "description": "Temporary preview of Omarchy workspace PRs #8997 and #10190",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Workspaces.qml"
+  },
+  "barWidget": {
+    "displayName": "Workspaces Integration Preview",
+    "description": "Stock-style per-monitor workspace indicators with move-state refresh",
+    "category": "Compositor",
+    "defaultSection": "left",
+    "allowMultiple": false
+  },
+  "omarchy": {
+    "clonedFrom": "omarchy.workspaces"
+  }
+}
