@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "io.github.dzanaga.workspaces-integration-preview",
   "name": "Workspaces Integration Preview",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "dzanaga",
   "description": "Temporary preview of Omarchy workspace PRs #8997 and #10190",
   "kinds": [
@@ -16,7 +16,19 @@
     "description": "Stock-style per-monitor workspace indicators with move-state refresh",
     "category": "Compositor",
     "defaultSection": "left",
-    "allowMultiple": false
+    "allowMultiple": false,
+    "defaults": {
+      "useThemeColorForActiveWorkspace": true
+    },
+    "schema": [
+      {
+        "key": "useThemeColorForActiveWorkspace",
+        "type": "boolean",
+        "label": "Use theme color for active workspace",
+        "description": "Show the active workspace as a number in the current Omarchy theme color instead of the stock symbol.",
+        "defaultValue": true
+      }
+    ]
   },
   "omarchy": {
     "clonedFrom": "omarchy.workspaces"

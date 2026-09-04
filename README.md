@@ -7,7 +7,19 @@ A temporary, installable preview of the combined workspace changes proposed in:
 
 The stale-state behavior is tracked in [Omarchy issue #10187](https://github.com/omacom/omarchy/issues/10187).
 
-This widget deliberately preserves the stock Omarchy workspace styling. It exists so the combined behavior can be tested during normal use while the upstream changes are reviewed.
+This widget preserves the stock Omarchy layout while showing the active workspace number in the current theme color by default. It exists so the combined behavior can be tested during normal use while the upstream changes are reviewed.
+
+## Appearance
+
+The **Use theme color for active workspace** option is enabled by default. Turn it off in the Omarchy shell settings to restore the stock active-workspace symbol.
+
+The same option can be configured directly on the widget entry in `~/.config/omarchy/shell.json`:
+
+```json
+"settings": {
+  "useThemeColorForActiveWorkspace": false
+}
+```
 
 ## Installation
 

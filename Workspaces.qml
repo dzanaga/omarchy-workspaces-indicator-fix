@@ -8,6 +8,12 @@ import qs.Ui
 BarWidget {
   id: root
   moduleName: "omarchy.workspaces"
+  property var settings
+
+  readonly property bool useThemeColorForActiveWorkspace: !settings
+    || settings.useThemeColorForActiveWorkspace === undefined
+    || settings.useThemeColorForActiveWorkspace === null
+    || settings.useThemeColorForActiveWorkspace === true
 
   // A bar surface exists per monitor, so highlight the workspace active on
   // this widget's own monitor rather than Hyprland.focusedWorkspace, which
@@ -82,7 +88,10 @@ BarWidget {
         readonly property bool focused: root.activeWorkspaceId === modelData
 
         bar: root.bar
-        text: focused ? "\uDB85\uDCFB" : (modelData === 10 ? "0" : String(modelData))
+        text: focused && !root.useThemeColorForActiveWorkspace
+          ? "\uDB85\uDCFB"
+          : (modelData === 10 ? "0" : String(modelData))
+        active: focused && root.useThemeColorForActiveWorkspace
         opacity: occupied || focused ? 1 : 0.5
         horizontalMargin: 6
         verticalPadding: 6
