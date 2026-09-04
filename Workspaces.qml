@@ -8,12 +8,8 @@ import qs.Ui
 BarWidget {
   id: root
   moduleName: "omarchy.workspaces"
-  property var settings
 
-  readonly property bool useThemeColorForActiveWorkspace: !settings
-    || settings.useThemeColorForActiveWorkspace === undefined
-    || settings.useThemeColorForActiveWorkspace === null
-    || settings.useThemeColorForActiveWorkspace === true
+  readonly property bool useThemeColorForActiveWorkspace: root.setting("useThemeColorForActiveWorkspace", true) === true
 
   // A bar surface exists per monitor, so highlight the workspace active on
   // this widget's own monitor rather than Hyprland.focusedWorkspace, which
