@@ -7,19 +7,26 @@ A temporary, installable preview of the combined workspace changes proposed in:
 
 The stale-state behavior is tracked in [Omarchy issue #10187](https://github.com/omacom/omarchy/issues/10187).
 
-This widget preserves the stock Omarchy layout while showing the active workspace number in the current theme color by default. It exists so the combined behavior can be tested during normal use while the upstream changes are reviewed.
+This widget preserves the stock Omarchy layout and appearance. It exists so the combined behavior can be tested during normal use while the upstream changes are reviewed.
 
 ## Appearance
 
-The **Use theme color for active workspace** option is enabled by default. Turn it off in the Omarchy shell settings to restore the stock active-workspace symbol.
+By default, the active workspace uses Omarchy's stock symbol. The optional `useThemeColorForActiveWorkspace` setting replaces that symbol with the workspace number in the current theme's accent color.
 
-The same option can be configured directly on the widget entry in `~/.config/omarchy/shell.json`:
+| Theme color enabled | Default stock symbol |
+| --- | --- |
+| ![Active workspace shown as a colored number](./assets/workspaces-themed.png) | ![Active workspace shown with the stock symbol](./assets/workspaces-stock.png) |
+
+To enable the colored number, add the option directly beside the widget's `id` in `~/.config/omarchy/shell.json`:
 
 ```json
-"settings": {
-  "useThemeColorForActiveWorkspace": false
+{
+  "id": "io.github.dzanaga.workspaces-integration-preview",
+  "useThemeColorForActiveWorkspace": true
 }
 ```
+
+Set it to `false`, or omit it entirely, to use the stock symbol. The shell reloads the change automatically.
 
 ## Installation
 
@@ -45,7 +52,7 @@ Removing the preview restores the built-in Omarchy workspace widget.
 
 ## Scope
 
-The preview contains only the combined `Workspaces.qml` from the integration test branch. It does not include the optional color highlighting from [Monitor Workspaces](https://github.com/dzanaga/omarchy-monitor-workspaces).
+The workspace-state behavior is the combined implementation from the integration test branch. The themed-number option only changes how the active workspace is drawn.
 
 Once both upstream changes are available in Omarchy, this preview plugin should no longer be necessary.
 

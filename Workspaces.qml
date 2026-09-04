@@ -9,7 +9,7 @@ BarWidget {
   id: root
   moduleName: "omarchy.workspaces"
 
-  readonly property bool useThemeColorForActiveWorkspace: root.setting("useThemeColorForActiveWorkspace", true) === true
+  readonly property bool useThemeColorForActiveWorkspace: root.setting("useThemeColorForActiveWorkspace", false) === true
 
   // A bar surface exists per monitor, so highlight the workspace active on
   // this widget's own monitor rather than Hyprland.focusedWorkspace, which

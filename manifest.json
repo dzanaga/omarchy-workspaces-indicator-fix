@@ -18,7 +18,7 @@
     "defaultSection": "left",
     "allowMultiple": false,
     "defaults": {
-      "useThemeColorForActiveWorkspace": true
+      "useThemeColorForActiveWorkspace": false
     },
     "schema": [
       {
@@ -26,7 +26,7 @@
         "type": "boolean",
         "label": "Use theme color for active workspace",
         "description": "Show the active workspace as a number in the current Omarchy theme color instead of the stock symbol.",
-        "defaultValue": true
+        "defaultValue": false
       }
     ]
   },
